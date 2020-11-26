@@ -7,10 +7,10 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	int level = 0;
+
 	if (!tree)
 		return (0);
-
-	int level = 0;
 
 	level = binary_tree_height(tree);
 	return ((size_t)_pow_recursion(2, level) - 1 == binary_tree_size(tree));
